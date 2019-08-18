@@ -1,0 +1,15 @@
+/* body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} */
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#__next > main {
+  flex-grow: 1;
+}

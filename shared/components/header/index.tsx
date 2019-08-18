@@ -1,7 +1,33 @@
 import React from "react"
+import Title from "./components/Title"
+import { Color } from "../../ui/enum"
+import Login from "./components/Login"
 
 const Header: React.FC = () => {
-  return <div>Header</div>
+  return (
+    <>
+      <style jsx>
+        {`
+          header {
+            background-color: ${Color.PrimaryDark};
+          }
+          .header-container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        `}
+      </style>
+      <header>
+        <div className="header-container">
+          <Title>Lib Subscription</Title>
+          <Login />
+        </div>
+      </header>
+    </>
+  )
 }
 
 export default React.memo(Header)
