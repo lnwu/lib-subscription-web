@@ -1,7 +1,7 @@
 {
   "name": "lib-subscription-web",
   "scripts": {
-    "lint": "eslint ./pages --ext .tsx,.ts",
+    "lint": "eslint . --ext .tsx,.ts",
     "build": "next build",
     "start": "next"
   },
