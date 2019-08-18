@@ -1,10 +1,14 @@
-module.exports = {
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const withCSS = require("@zeit/next-css")
+
+module.exports = withCSS({
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
-      fs: 'empty'
+      fs: "empty"
     }
 
     return config
   }
-}
+})

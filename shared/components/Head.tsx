@@ -1,5 +1,6 @@
 import React from "react"
 import NextHead from "next/head"
+import "@lnwu/normalize.css"
 
 interface IProps {
   title?: string
