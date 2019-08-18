@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
-import Head from './shared/components/Head';
+import React, { useEffect, useState } from "react"
+import Link from "next/link"
+import Head from "./shared/components/Head"
 
 const Home = () => {
-  const [date, setDate] = useState<any>(null);
+  const [date, setDate] = useState<any>(null)
 
   useEffect(() => {
     async function getDate() {
-      const res = await fetch('/api/date');
-      const newDate = await res.json();
-      setDate(newDate);
+      const res = await window.fetch("/api/date")
+      const newDate = await res.json()
+      setDate(newDate)
     }
-    getDate();
-  }, []);
+    getDate()
+  }, [])
 
   return (
     <div>
@@ -21,13 +21,19 @@ const Home = () => {
       <div className="hero">
         <h1 className="title">Welcome to Next!</h1>
         <p className="description">
-          To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.js</code> files, then save to reload.
+          To get started, edit the <code>pages/index.js</code> or{" "}
+          <code>pages/api/date.js</code> files, then save to reload.
         </p>
 
         <p className="row date">
-          The date is:&nbsp; {date
-            ? <span><b>{date.date}</b></span>
-            : <span className="loading"></span>}
+          The date is:&nbsp;{" "}
+          {date ? (
+            <span>
+              <b>{date.date}</b>
+            </span>
+          ) : (
+            <span className="loading"></span>
+          )}
         </p>
 
         <div className="row">
@@ -41,7 +47,7 @@ const Home = () => {
             <a className="card">
               <h3>Examples &rarr;</h3>
               <p>
-                Find other example boilerplates on the{' '}
+                Find other example boilerplates on the{" "}
                 <code>create-next-app</code> site
               </p>
             </a>
