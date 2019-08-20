@@ -1,6 +1,6 @@
 import React from "react"
 import Title from "./components/Title"
-import { Color } from "../../ui/enum"
+import { Color, Width } from "../../ui/enum"
 import Login from "./components/Login"
 
 const Header: React.FC = () => {
@@ -12,7 +12,7 @@ const Header: React.FC = () => {
             background-color: ${Color.PrimaryDark};
           }
           .header-container {
-            width: 1200px;
+            width: ${Width.Container};
             margin: 0 auto;
             display: flex;
             align-items: center;
