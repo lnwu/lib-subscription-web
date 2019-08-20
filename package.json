@@ -10,18 +10,18 @@
   "dependencies": {
     "@lnwu/normalize.css": "^0.0.19",
     "@zeit/next-css": "^1.0.1",
-    "next": "^9.0.2",
+    "next": "^9.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.2",
     "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.8.5",
+    "@types/react-dom": "^16.9.0",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.0.0",
+    "eslint": "^6.2.1",
+    "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "prettier": "^1.18.2",
