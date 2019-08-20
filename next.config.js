@@ -1,13 +1,27 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
+require("dotenv").config()
+
 const withCSS = require("@zeit/next-css")
+const Dotenv = require("dotenv-webpack")
+const path = require("path")
 
 module.exports = withCSS({
   webpack: config => {
-    // Fixes npm packages that depend on `fs` module
+    config.plugins = config.plugins || []
+
     config.node = {
       fs: "empty"
     }
+
+    config.plugins = [
+      ...config.plugins,
+
+      new Dotenv({
+        path: path.join(__dirname, ".env"),
+        systemvars: true
+      })
+    ]
 
     return config
   }
